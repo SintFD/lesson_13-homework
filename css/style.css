@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+img {
+  display: block;
+}
+
 .main {
   background-color: rgba(249, 184, 0, 0.08);
   background-image: url("../images/background.png");
@@ -29,16 +33,18 @@
   padding: 16px 38px;
   border: 0;
   color: rgb(255, 255, 255);
-  width: 100%;
   font-family: Segoe UI;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
   display: flex;
   justify-content: space-between;
+  text-wrap: nowrap;
 }
 
 .online-shopping__wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 0 22px 22px 22px;
 }
 
@@ -70,13 +76,38 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1920px) {
   .container {
     width: 1700px;
   }
 
   .online-shopping {
     flex-direction: row-reverse;
-    /* text-align: unset; */
+    text-align: left;
+    padding: 50px 100px 50px 180px;
+    align-items: center;
+  }
+
+  .online-shopping__wrapper {
+    padding: 0;
+    display: block;
+  }
+
+  .online-shopping__title {
+    font-size: 50px;
+    line-height: 67px;
+    margin-bottom: 50px;
+  }
+
+  .online-shopping__img {
+    width: 714px;
+  }
+
+  .online-shopping__button {
+    gap: 75px;
+  }
+
+  .online-shopping__paragraph {
+    margin-bottom: 44px;
   }
 }
